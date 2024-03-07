@@ -18,3 +18,13 @@ jobs:
               run: make
             - name: make distcheck
               run: make distcheck
+
+    build_cmake:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v3
+            - name: cmake
+              run:  mkdir build && cd build && cmake ..
+            - name: build
+              run: cmake --build .

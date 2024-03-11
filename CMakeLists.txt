@@ -4,7 +4,7 @@ project(modbus)
 
 if(NOT TARGET ${PROJECT_NAME})
 
-  message(STATUS "Running ./autogen.sh --host=${CMAKE_SYSTEM_PROCESSOR}")
+  message(STATUS "Running ./autogen.sh")
   execute_process(COMMAND ./autogen.sh 
                 WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
                 RESULT_VARIABLE AUTOGEN_RESULT)
@@ -13,7 +13,7 @@ if(NOT TARGET ${PROJECT_NAME})
     message(FATAL_ERROR "autogen.sh failed")
   endif()
 
-  message(STATUS "Running ./configure")
+  message(STATUS "Running ./configure --host=${CMAKE_SYSTEM_PROCESSOR}")
   execute_process(COMMAND ./configure
                 WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
                 RESULT_VARIABLE CONFIGURE_RESULT) #cd ${CMAKE_CURRENT_LIST_DIR} && ./autogen.sh && ./configure)

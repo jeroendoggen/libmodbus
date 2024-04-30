@@ -55,12 +55,11 @@
 #define MSG_DONTWAIT MSG_NONBLOCK
 #endif
 
+// clang-format on
+#include "modbus-private.h"
 #ifdef HAVE_ACCEPT4
 extern int accept4 (int __fd, __SOCKADDR_ARG __addr, socklen_t *__restrict __addr_len, int __flags);
 #endif
-// clang-format on
-
-#include "modbus-private.h"
 
 #include "modbus-tcp-private.h"
 #include "modbus-tcp.h"

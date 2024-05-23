@@ -58,7 +58,7 @@
 // clang-format on
 #include "modbus-private.h"
 #ifdef HAVE_ACCEPT4
-extern int accept4 (int __fd, __SOCKADDR_ARG __addr, socklen_t *__restrict __addr_len, int __flags);
+extern int accept4 (int __fd, struct sockaddr *__addr, socklen_t *__restrict __addr_len, int __flags);
 #endif
 
 #include "modbus-tcp-private.h"
